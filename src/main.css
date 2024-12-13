@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+:root {
+  --red: rgb(244, 73, 34);
+  --blue: rgb(38, 78, 201);
+  --teal: rgb(253, 242, 228);
+  --pink: rgb(255, 179, 178);
+  --green: rgb(96, 190, 170);
+  --yellow: rgb(254, 205, 120);
+  --pale-blue: rgb(92, 153, 216);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    @apply m-0 p-0 scroll-smooth;
+
+    ::-webkit-scrollbar {
+      @apply h-1 w-1 bg-teal-normal;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-green-normal;
+    }
+  }
+
+  html {
+    @apply min-h-screen;
+  }
+
+  body {
+    @apply w-full bg-teal-normal overflow-x-hidden;
+  }
+
+  section {
+    @apply flex w-full flex-none;
+  }
+
+  #root {
+    @apply flex grow flex-col w-full relative items-center justify-start;
+  }
+}
