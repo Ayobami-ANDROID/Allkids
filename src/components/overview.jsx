@@ -25,7 +25,7 @@ export const Overview = () => {
         Kidpreneur Bootcamp is perfect for kids who are
       </h3>
 
-      <div className="w-full px-spacing-normal flex flex-wrap items-center gap-10">
+      <div className="w-full px-spacing-normal grid grid-cols-3 flex-wrap items-center gap-10">
         {overviews.map((item, index) => (
           <div
             key={item.title}
