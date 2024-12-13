@@ -34,9 +34,9 @@
     @apply w-full bg-teal-normal overflow-x-hidden;
   }
 
-  section {
+  /* section {
     @apply flex w-full flex-none;
-  }
+  } */
 
   #root {
     @apply flex grow flex-col w-full relative items-center justify-start;
