@@ -5,7 +5,7 @@ export const Enroll = () => {
   return (
     <section className="w-full flex flex-col bg-white pb-28 lg:pb-0 2xl:px-spacing-small">
       <div className="w-full flex gap-10 items-start flex-col-reverse lg:flex-row">
-        <div className="basis-80 flex flex-1 flex-col justify-center gap-10 p-spacing-small lg:pl-spacing-normal">
+        <div className="basis-80 flex flex-1 flex-col justify-center gap-10 p-spacing-small lg:pl-spacing-normal lg:mb-0 mb-8">
           <p className="text-2xl">
             We believe young minds have the power to make a big impact. With the
             right guidance, they can become creators, innovators, and leaders of

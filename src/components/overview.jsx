@@ -29,20 +29,26 @@ export const Overview = () => {
         {overviews.map((item, index) => (
           <div
             key={item.title}
-            className={`${item.className} flex-1 relative basis-80 rounded-3xl flex flex-col lg:flex-row items-center justify-center px-5 gap-6`}
+            className="h-full relative flex flex-col items-center justify-center "
+            // className={`${item.className}  relative  rounded-3xl lg:h-full h-40 flex flex-col lg:flex-row items-center justify-center px-5 gap-6`}
           >
+            <div className={`${item.className} w-full  relative  rounded-3xl lg:h-full h-40 flex flex-col lg:flex-row items-center justify-center  gap-6`}>
             <img
               alt=""
               loading="lazy"
               src={item.image}
-              className={`flex-none rounded-xl lg:w-2/5 p-4 w-60 h-40 lg:p-0 lg:h-80 object-contain object-bottom ${item.imgClassName}`}
+              className={` rounded-xl lg:w-2/5 w-full   lg:p-0 h-full object-contain object-bottom ${item.imgClassName}`}
             />
-            <p className="text-xl lg:text-2xl my-auto">{item.title}</p>
+            <p className="text-xl lg:text-xl my-auto lg:block hidden">{item.title}</p>
+            </div>
+
+            <p className="text-xl my-8 lg:hidden ">{item.title}</p>
+            
 
             <img
               src={redWaveDoubleIcon}
               alt=""
-              className={`absolute bottom-32 lg:bottom-10 h-8 lg:h-10 odd:-right-10 lg:-right-10 lg:left-auto ${
+              className={`absolute bottom-40 lg:bottom-4 h-8 lg:h-10 odd:-right-10 lg:-right-10 lg:left-auto ${
                 index % 2 === 0 ? "-right-10" : "-left-10"
               }`}
             />
