@@ -7,7 +7,7 @@ export { default as greenDiamondIcon } from "../assets/icons/green-diamond.webp"
 export { default as redWaveDoubleIcon } from "../assets/icons/red-wave-double.webp";
 export { default as blueWaveTrippleIcon } from "../assets/icons/blue-wave-tripple.webp";
 
-export { default as kid1Img } from "../assets/images/kidimg1.png";
+export { default as kid1Img } from "../assets/images/KidImg1.png";
 export { default as kid2Img } from "../assets/images/kid-2.webp";
 export { default as kid3Img } from "../assets/images/kidImg3.webp";
 export { default as boardImg } from "../assets/images/board.webp";
