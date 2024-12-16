@@ -109,7 +109,7 @@ export const overviews = [
   {
     image: kid3Img,
     className: "lg:bg-pale-blue-normal px-4",
-    imgClassName: "lg:bg-transparent bg-blue-normal origin-bottom lg:scale-y-[1.35] ",
+    imgClassName: "lg:bg-transparent bg-blue-normal origin-bottom lg:scale-y-[1.5] ",
     title: "Excited to try new things, challenge themselves, and have fun! ",
   },
 ];

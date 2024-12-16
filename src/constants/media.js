@@ -9,6 +9,6 @@ export { default as blueWaveTrippleIcon } from "../assets/icons/blue-wave-trippl
 
 export { default as kid1Img } from "../assets/images/kidImg1.png";
 export { default as kid2Img } from "../assets/images/kid-2.webp";
-export { default as kid3Img } from "../assets/images/kid-3.webp";
+export { default as kid3Img } from "../assets/images/kidImg3.webp";
 export { default as boardImg } from "../assets/images/board.webp";
 export { default as kidHeroIndexImg } from "../assets/images/kid-hero-index.webp";
