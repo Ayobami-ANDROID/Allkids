@@ -5,48 +5,52 @@ import {
   kidHeroIndexImg,
   redWaveIcon,
   yellowWaveIcon,
-} from "../constants/media";
+} from "../../constants/media";
+import { Header } from "./header";
 
 export const Hero = () => {
   return (
     <section className="w-full  relative  py-10 gap-10 lg:gap-0  ">
-   
+   <Header />
     
     <div className="lg:flex flex-col-reverse lg:flex-row w-full relative px-spacing-normal xl:px-spacing-large mb-8">
       {/* Second div (text and headings) moved to top on small screens */}
-      <div className="flex gap-6 flex-col items-end w-full order-1 lg:order-2">
-        <p className="text-xl lg:text-3xl">Welcome to Kidpreneur Bootcamp:</p>
+      <div className="flex gap-6 flex-col items-end w-full order-1 lg:order-2 text">
+        <p className="text-xl lg:text-3xl w-full">Welcome to Kidpreneur Bootcamp:</p>
         
-        <h2 className="flex flex-col capitalize text-7xl lg:text-8xl ">
-          <p className="flex gap-2 flex-col relative lg:flex-row items-center lg:items-end ">
-            <span className="text-2xl lg:text-4xl mb-2">where</span>
+        <h2 className="flex flex-col capitalize text-7xl lg:text-8xl mxl:text-9xl  w-full">
+          <p className="flex gap-2 flex-col relative lg:flex-row items-center lg:items-end   ">
+            <span className="text-2xl lg:text-4xl xl:text-5xl mxl:text-6xl mb-2">where</span>
             big ideas
             <img
               src={redWaveIcon}
               alt=""
-              className="absolute rotate-90 -bottom-16 right-14 object-bottom"
+              className="absolute rotate-90 -bottom-16 right-14 object-bottom mxl:right-52"
             />
           </p>
           
-          <p className="flex gap-2 items-start justify-end">
-            <span className="text-2xl lg:text-5xl mt-2">meet</span>
-            <p className="flex flex-col items-end">
-              <span className="">young</span>
-              <span className="flex relative">
+          <p className="flex gap-2  w-full lg:ml-32">
+            <span className="text-2xl lg:text-5xl mxl:text-6xl mt-2 ">meet</span>
+            <p className="flex flex-col items-end ">
+              <span className="w-full">young</span>
+              <span className="flex relative w-full">
                 minds
                 <img
                   alt=""
                   src={yellowWaveIcon}
-                  className="absolute -bottom-14 lg:-bottom-16 rotate-90 w-2 lg:w-3 right-12 lg:right-60 object-contain object-bottom"
+                  className="absolute -bottom-14 lg:-bottom-16 rotate-90 w-2 lg:w-3 right-12 lg:right-60 mxl:right-64 object-contain object-bottom"
                 />
               </span>
             </p>
           </p>
         </h2>
-        
+        <div className="w-full flex justify-center">
         <button className="px-10 py-3 hidden lg:flex rounded-full bg-pink-normal text-center font-semibold text-xl capitalize">
           enroll your child now
         </button>
+        </div>
+        
+        
       </div>
 
       {/* First div (board and description) */}

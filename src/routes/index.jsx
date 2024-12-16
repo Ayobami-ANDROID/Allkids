@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import { Loader } from "../components/loader";
-import { Layout } from "../components/layout";
+import { Loader } from "../components/LandingPageComponent/loader";
+import { Layout } from "../components/LandingPageComponent/layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "../pages";

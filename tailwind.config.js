@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
+const defaultTheme = require("tailwindcss/defaultTheme");
 export const plugins = [];
 
 export const content = ["./index.html", "./src/**/**/*.{css,js,jsx}"];
@@ -35,6 +35,13 @@ export const theme = {
       "auto-fill-20": "repeat(auto-fill, minmax(20em, 1fr))",
       "auto-fill-22": "repeat(auto-fill, minmax(22em, 1fr))",
       "auto-fill-24": "repeat(auto-fill, minmax(24em, 1fr))",
+    },
+    screens: {
+      xss: "300px",
+      xs: "340px",
+      xsm: "500px",
+      mxl: "1400px",
+      ...defaultTheme.screens,
     },
   },
 };

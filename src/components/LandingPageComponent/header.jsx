@@ -1,4 +1,4 @@
-import { logoIcon } from "../constants/media";
+import { logoIcon } from "../../constants/media";
 
 export const Header = () => {
   return (

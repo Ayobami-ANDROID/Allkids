@@ -1,4 +1,4 @@
-import { questions } from "../constants/config";
+import { questions } from "../../constants/config";
 import { useMemo, useState, useEffect } from "react";
 
 export const Question = () => {
@@ -23,9 +23,15 @@ export const Question = () => {
 
   return (
     <section className="w-full lg:px-spacing-small flex flex-col items-center lg:items-start">
-      <p className="w-10/12 md:w-80 lg:w-1/3 rounded-3xl p-10 px-14 lg:px-14 bg-pink-normal capitalize font-semibold text-2xl lg:text-4xl -my-20 lg:mt-0 z-10">
-        get ready to watch them shine
+      <div className="w-10/12 md:w-80 lg:w-1/3 rounded-3xl p-10 px-14 lg:px-14 bg-pink-normal capitalize font-semibold text-2xl lg:text-4xl  -my-20 lg:mt-0 z-10">
+      <p>
+        get ready to 
       </p>
+      <p>
+      watch them shine
+      </p>
+      </div>
+     
 
       <div className="w-full p-spacing-normal pt-40 flex flex-col lg:rounded-3xl bg-yellow-normal">
         <p className="text-3xl mb-40">

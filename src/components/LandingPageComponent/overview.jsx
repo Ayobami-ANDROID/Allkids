@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
-import { overviews } from "../constants/config";
-import { greenDiamondIcon, redWaveDoubleIcon } from "../constants/media";
+import { overviews } from "../../constants/config";
+import { greenDiamondIcon, redWaveDoubleIcon } from "../../constants/media";
 
 export const Overview = () => {
   return (

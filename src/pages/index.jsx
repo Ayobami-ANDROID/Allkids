@@ -1,8 +1,8 @@
-import { Hero } from "../components/hero";
-import { Enroll } from "../components/enroll";
-import { Expect } from "../components/expect";
-import { Overview } from "../components/overview";
-import { Question } from "../components/question";
+import { Hero } from "../components/LandingPageComponent/hero";
+import { Enroll } from "../components/LandingPageComponent/enroll";
+import { Expect } from "../components/LandingPageComponent/expect";
+import { Overview } from "../components/LandingPageComponent/overview";
+import { Question } from "../components/LandingPageComponent/question";
 
 export default function Page() {
   return (

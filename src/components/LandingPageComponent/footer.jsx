@@ -1,5 +1,5 @@
-import { socials } from "../constants/config";
-import { logoIcon } from "../constants/media";
+import { socials } from "../../constants/config";
+import { logoIcon } from "../../constants/media";
 import { BsArrowRight } from "react-icons/bs";
 
 export const Footer = () => {

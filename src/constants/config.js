@@ -96,7 +96,7 @@ export const overviews = [
     image: kid1Img,
     className: "lg:bg-yellow-normal",
     imgClassName:
-      "lg:bg-transparent bg-yellow-normal origin-bottom lg:scale-y-[1.35] lg:scale-x-[1.05]",
+      "lg:bg-transparent bg-yellow-normal origin-bottom lg:scale-y-[1.8] lg:scale-x-[1.45]",
     title: "Curious about how businesses work and eager to learn.",
   },
   {
@@ -108,8 +108,8 @@ export const overviews = [
   },
   {
     image: kid3Img,
-    className: "lg:bg-pale-blue-normal",
-    imgClassName: "lg:bg-transparent bg-blue-normal origin-bottom lg:scale-y-[1.25]",
+    className: "lg:bg-pale-blue-normal px-4",
+    imgClassName: "lg:bg-transparent bg-blue-normal origin-bottom lg:scale-y-[1.35] ",
     title: "Excited to try new things, challenge themselves, and have fun! ",
   },
 ];

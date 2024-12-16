@@ -1,7 +1,7 @@
 import { IoClose } from "react-icons/io5";
 import { IoMdPlay } from "react-icons/io";
 import { useEffect, useState } from "react";
-import { expectationsBody, expectationsHeader } from "../constants/config";
+import { expectationsBody, expectationsHeader } from "../../constants/config";
 
 export const Expect = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

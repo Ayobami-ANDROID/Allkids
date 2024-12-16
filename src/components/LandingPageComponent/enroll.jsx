@@ -1,5 +1,5 @@
-import { blueWaveTrippleIcon } from "../constants/media";
-import { WaitlistForm } from "./forms/waitlist";
+import { blueWaveTrippleIcon } from "../../constants/media";
+import { WaitlistForm } from "../forms/waitlist";
 
 export const Enroll = () => {
   return (
