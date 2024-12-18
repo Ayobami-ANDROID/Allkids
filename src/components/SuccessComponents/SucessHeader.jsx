@@ -3,7 +3,7 @@ import { redWaveIcon } from "../../constants/media"
 
 const SucessHeader = () => {
     return (
-        <header className="w-full flex items-center justify-between    top-0 sticky z-50 bg-teal-normal">
+        <header className="w-full flex items-center justify-between    top-0 sticky  bg-teal-normal">
             <div className="flex flex-col items-center justify-center mx-8">
                 <img loading="lazy" src={logoIcon} alt="" className="h-14 object-contain" />
             </div>

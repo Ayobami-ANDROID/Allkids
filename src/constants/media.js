@@ -12,3 +12,6 @@ export { default as kid2Img } from "../assets/images/kid-2.webp";
 export { default as kid3Img } from "../assets/images/kidImg3.webp";
 export { default as boardImg } from "../assets/images/board.webp";
 export { default as kidHeroIndexImg } from "../assets/images/kid-hero-index.webp";
+export { default as Kid4Img4} from "../assets/images/kid4Img.webp"
+export { default as TabKid} from "../assets/images/TabKid.webp"
+export { default as backg} from "../assets/images/background.webp"
