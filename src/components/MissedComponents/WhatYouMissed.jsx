@@ -6,7 +6,7 @@ const WhatYouMissed = () => {
     <div className='flex lg:flex-row flex-col  bg-[#fff] justify-between py-8 w-full lg:px-0 px-8'>
         <div className='flex flex-col'>
             <h1 className='lg:text-5xl text-3xl lg:w-[44%] w-full lg:mx-24 mx-0'>Here’s what they missed in Batch One</h1>
-            <div className='flex justify-center'>
+            <div className='flex justify-center lg:justify-start'>
                 <img src={triangle} className='rotate-90'/>
                 <img src={triangle} className='rotate-90'/>
                 <img src={triangle} className='rotate-90'/>
