@@ -24,7 +24,7 @@ export const WaitlistForm = () => {
           axios.post(`/wishlists`,values)
           .then((res) => {
             console.log(res)
-            toast.success(res.data.success)
+            toast.success(res.data.message)
             
           })
           .catch((e) => {
