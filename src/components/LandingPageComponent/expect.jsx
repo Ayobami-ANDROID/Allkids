@@ -73,8 +73,14 @@ export const Expect = () => {
           </h3>
 
           <div className="w-4/5 p-10 lg:-mt-24 rounded-2xl bg-yellow-normal aspect-video">
-            <div className="w-full h-full flex items-center justify-center bg-white">
-              <IoMdPlay className="text-red-normal w-10 lg:w-20 h-10 lg:h-20" />
+            <div className="w-full h-full flex  bg-white">
+              {/* <IoMdPlay className="text-red-normal w-10 lg:w-20 h-10 lg:h-20" /> */}
+              <iframe 
+              src="https://youtu.be/EQ-6c1fm27A?si=-0XjUxXmAa7ug56m"
+              className="w-full"
+              
+              >
+              </iframe>
             </div>
           </div>
 
