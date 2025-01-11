@@ -4,10 +4,45 @@ import axios from "axios";
 import { useFormik } from "formik";
 import { toast } from 'react-hot-toast'
 import { Loader2 } from 'lucide-react';
+import { useEffect } from "react";
+import {  useSearchParams } from "react-router-dom";
 
 export const WaitlistForm = () => {
   const handleSubmit = (ev) => ev.preventDefault();
   const [isLoading,setIsLoading] = useState(false)
+  const links = "https://allkids-sage.vercel.app"
+  
+  const [params, setParams] = useState({
+    email: '',
+    otp: '',
+    platform: ''
+  });
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const email = searchParams.get('email')?.replace(' ', '+')
+    const otp = searchParams.get('otp');
+    const platform = searchParams.get('platform');
+    if (email && otp && platform) {
+      setParams({ email, otp, platform });
+      axios.post('/wishlists/verify-email',{
+        email:email,
+        platform:platform,
+        otp:otp
+      })
+      .then((res) => {
+        console.log(res)
+        toast.success(res.data.message)
+      })
+      .catch((e) => {
+        console.log(e.response.data.message)
+        toast.error(e.response.data.message)
+      })
+    }
+  
+  },[])
+
+
 
   const formik = useFormik({
     initialValues:{
@@ -15,8 +50,8 @@ export const WaitlistForm = () => {
       name:"",
       phoneNumber:"",
       platformSegmentId:"12",
-      platform:"allkids",
-      emailVerificationUrl:"https://allkids-sage.vercel.app"
+      platform:"stemfest",
+      emailVerificationUrl:links
     },
     validationSchema:wishlist,
     onSubmit:(values,{resetForm}) => {

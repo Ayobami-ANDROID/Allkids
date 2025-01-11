@@ -76,7 +76,7 @@ export const Expect = () => {
             <div className="w-full h-full flex  bg-white">
               {/* <IoMdPlay className="text-red-normal w-10 lg:w-20 h-10 lg:h-20" /> */}
               <iframe 
-              src="https://youtu.be/EQ-6c1fm27A?si=-0XjUxXmAa7ug56m"
+              src="https://www.youtube.com/embed/EQ-6c1fm27A"
               className="w-full"
               
               >
