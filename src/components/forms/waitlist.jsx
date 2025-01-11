@@ -79,7 +79,7 @@ export const WaitlistForm = () => {
          {formik.touched.phoneNumber &&formik.errors.phoneNumber ? <p className="text-xs text-red-500">{formik.errors.email}</p> :" "}
       </div>
 
-      <button type="submit" className="px-10 py-1.5 rounded-full bg-yellow-normal self-center text-black text-2xl">
+      <button type="submit" className="px-10 py-1.5 flex items-center justify-center rounded-full bg-yellow-normal self-center text-black text-2xl">
        {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />} Join Now
       </button>
     </form>
