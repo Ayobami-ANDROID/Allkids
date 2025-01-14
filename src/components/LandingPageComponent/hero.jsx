@@ -65,11 +65,11 @@ export const Hero = () => {
             <img
               alt=""
               src={kidHeroIndexImg}
-              className="w-full h-full object-contain absolute"
+              className="w-full h-[80%] object-contain absolute right-12 scale-y-[1.15] lg:top-10 lg:bottom-0 bottom-10"
             />
           </div>
           
-          <p className="lg:absolute bg-[#fff] rounded-3xl p-6 lg:w-3/5 top-[70%] left-[50%]">
+          <p className="lg:absolute bg-[#fff] rounded-3xl p-6 xl:w-3/5 sm:w-[75%] top-[70%] left-[50%]">
             This isn&#39;t just another camp. It&#39;s a launchpad for your
             child&#39;s entrepreneurial journey. At Kidpreneur Bootcamp, we help
             kids explore their creativity, learn real-world skills, and build the
@@ -91,7 +91,7 @@ export const Hero = () => {
     <img 
       src={blueZigzagIcon} 
       alt="" 
-      className="  absolute bottom-56 lg:bottom-32 -left-[42%] lg:left-0 h-16 lg:h-28" 
+      className="  absolute bottom-56  xl:bottom-32 -left-[42%] lg:left-0 h-16 xl:h-28" 
     />
     </div>
 
