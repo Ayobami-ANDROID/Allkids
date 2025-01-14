@@ -10,13 +10,13 @@ import { Header } from "./header";
 
 export const Hero = () => {
   return (
-    <section className="w-full  relative  py-10 gap-10 lg:gap-0  ">
+    <section className="w-full  relative  py-10 gap-10 lg:gap-0  lg:pb-48">
    <Header />
     
-    <div className="lg:flex flex-col-reverse lg:flex-row w-full relative px-spacing-normal xl:px-spacing-large mb-8">
+    <div className="lg:flex flex-col-reverse lg:flex-row  items-center justify-center w-full relative px-spacing-normal xl:px-spacing-large mb-8">
       {/* Second div (text and headings) moved to top on small screens */}
-      <div className="flex gap-6 flex-col items-end w-full order-1 lg:order-2 text">
-        <p className="text-xl lg:text-3xl w-full">Welcome to Kidpreneur Bootcamp:</p>
+      <div className="flex gap-6 flex-col lg:items-end  w-full order-1 lg:order-2 text ">
+        <p className="text-xl lg:text-3xl w-full lg:text-left text-center">Welcome to Kidpreneur Bootcamp:</p>
         
         <h2 className="flex flex-col capitalize text-7xl lg:text-8xl mxl:text-9xl  w-full">
           <p className="flex gap-2 flex-col relative lg:flex-row items-center lg:items-end   ">
@@ -25,15 +25,15 @@ export const Hero = () => {
             <img
               src={redWaveIcon}
               alt=""
-              className="absolute rotate-90 -bottom-16 right-14 object-bottom mxl:right-52"
+              className="absolute rotate-90 -bottom-16 lg:right-14 sm:right-80  right-14  object-bottom mxl:right-52"
             />
           </p>
           
-          <p className="flex gap-2  w-full lg:ml-32">
+          <p className="flex gap-2  sm:justify-center lg:justify-start w-full lg:ml-32 ml-12  ">
             <span className="text-2xl lg:text-5xl mxl:text-6xl mt-2 ">meet</span>
             <p className="flex flex-col items-end ">
               <span className="w-full">young</span>
-              <span className="flex relative w-full">
+              <span className="flex relative ">
                 minds
                 <img
                   alt=""
@@ -91,7 +91,7 @@ export const Hero = () => {
     <img 
       src={blueZigzagIcon} 
       alt="" 
-      className=" sm:static absolute bottom-10 -left-[40%] lg:left-0 h-16 lg:h-28" 
+      className="  absolute bottom-56 lg:bottom-32 -left-[42%] lg:left-0 h-16 lg:h-28" 
     />
     </div>
 
