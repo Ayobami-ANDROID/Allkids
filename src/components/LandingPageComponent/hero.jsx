@@ -45,9 +45,9 @@ export const Hero = () => {
           </p>
         </h2>
         <div className="w-full flex justify-center">
-        <button className="px-10 py-3 hidden lg:flex rounded-full bg-pink-normal text-center font-semibold text-xl capitalize">
+        <a href="#waitlist-form" className="px-10 py-3 hidden lg:flex rounded-full bg-pink-normal text-center font-semibold text-xl capitalize">
           enroll your child now
-        </button>
+        </a>
         </div>
         
         
@@ -78,9 +78,9 @@ export const Hero = () => {
 
          
           
-          <button className="px-10 py-3 lg:hidden rounded-full bg-pink-normal text-center font-semibold text-xl capitalize">
+          <a href="#waitlist-form" className="px-10 py-3 lg:hidden rounded-full bg-pink-normal text-center font-semibold text-xl capitalize">
             enroll your child now
-          </button>
+          </a>
         </div>
       </div>
     </div>

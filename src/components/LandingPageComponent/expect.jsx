@@ -85,8 +85,8 @@ export const Expect = () => {
           </div>
 
           <p className="text-2xl lg:text-4xl w-4/5 lg:pl-10">
-            Our bootcamp focuses on doing, not just learning. Here&#39;s what
-            your child will experience:
+          Our bootcamp focuses on inspiring creativity and 
+          turn ideas into action.
           </p>
         </div>
 

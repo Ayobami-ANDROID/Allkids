@@ -21,7 +21,7 @@ export const questions = [
   {
     quesiton: "What are the dates and times of the bootcamp?",
     answer:
-      "The bootcamp will take place on [insert dates] from [insert times].",
+      " The date for the bootcamp is the 17<sup>th</sup>- 22<sup>nd</sup> of February 2025.",
   },
   {
     quesiton: "How do I register my child for the bootcamp?",

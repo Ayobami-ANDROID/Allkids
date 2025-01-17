@@ -22,7 +22,7 @@ export const Overview = () => {
       </>
 
       <h3 className="text-4xl w-4/5 lg:w-auto mr-auto lg:mr-0">
-      Kidpreneur Bootcaamp is perfect for kids aged 8-14 who are
+      Kidpreneur Bootcamp is perfect for kids aged 8-14 who are
       </h3>
 
       <div className="w-full px-spacing-normal flex flex-wrap items-center gap-10 lg:grid grid-cols-3">
@@ -56,9 +56,9 @@ export const Overview = () => {
         ))}
       </div>
 
-      <button className="px-10 py-3 rounded-full bg-red-normal text-white text-lg">
+      {/* <button className="px-10 py-3 rounded-full bg-red-normal text-white text-lg">
         Join the waitlist
-      </button>
+      </button> */}
     </section>
   );
 };
