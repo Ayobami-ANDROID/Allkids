@@ -50,7 +50,7 @@ export const WaitlistForm = () => {
       name:"",
       phoneNumber:"",
       platformSegmentId:"12",
-      platform:"stemfest",
+      platform:"kidpreneur",
       emailVerificationUrl:links
     },
     validationSchema:wishlist,
