@@ -6,11 +6,13 @@ import { toast } from 'react-hot-toast'
 import { Loader2 } from 'lucide-react';
 import { useEffect } from "react";
 import {  useSearchParams } from "react-router-dom";
+import callcodes from "../../services/callcode.json"
 
 export const WaitlistForm = () => {
   const handleSubmit = (ev) => ev.preventDefault();
   const [isLoading,setIsLoading] = useState(false)
   const links = "https://allkids-sage.vercel.app"
+  const [callCode,setCallCode] = useState("+234")
   
   const [params, setParams] = useState({
     email: '',
@@ -56,7 +58,8 @@ export const WaitlistForm = () => {
     validationSchema:wishlist,
     onSubmit:(values,{resetForm}) => {
           setIsLoading(true)
-          axios.post(`/wishlists`,values)
+          const body = {...values, phoneNumber:`${callCode} ${values.phoneNumber}`}
+          axios.post(`/wishlists`,body)
           .then((res) => {
             console.log(res)
             toast.success(res.data.message)
@@ -72,6 +75,18 @@ export const WaitlistForm = () => {
           })
     }
   })
+
+  const formatDigits = (value) => {
+    return value
+      .replace(/\D/g, "") // Remove non-digit characters
+      .replace(/(\d{3})(\d{0,3})?(\d{0,4})?/, (_, p1, p2, p3) => {
+        let parts = [p1];
+        if (p2) parts.push(" " + p2);
+        if (p3) parts.push(" " + p3);
+        return parts.join("");
+      });
+  };
+
 
   return (
     <form
@@ -91,7 +106,7 @@ export const WaitlistForm = () => {
           onChange={formik.handleChange}
           className={`w-full outline-none p-4 border-b border-b-yellow-normal bg-transparent placeholder:text-white placeholder:capitalize ${formik.touched.name && formik.errors.name ?"border-red-500":"border-b-yellow-normal"}`}
         />
-        {formik.touched.name &&formik.errors.name ? <p className="text-xs text-red-500">{formik.errors.name}</p> :" "}
+        {formik.touched.name &&formik.errors.name ? <p className=" text-red-500">{formik.errors.name}</p> :" "}
         <input
           required
           type="email"
@@ -101,17 +116,34 @@ export const WaitlistForm = () => {
           placeholder="email"
           className={`w-full outline-none p-4 border-b border-b-yellow-normal bg-transparent placeholder:text-white placeholder:capitalize ${formik.touched.email && formik.errors.email ?"border-red-500":"border-b-yellow-normal"}`}
         />
-          {formik.touched.email &&formik.errors.email ? <p className="text-xs text-red-500">{formik.errors.email}</p> :" "}
-        <input
+          {formik.touched.email &&formik.errors.email ? <p className=" text-red-500">{formik.errors.email}</p> :" "}
+
+        <div className="flex gap-2">
+       
+          <select className="w-[30%]  outline-none p-4 border-b border-b-yellow-normal bg-transparent placeholder:text-white placeholder:capitalize" value={callCode} onChange={(e) => setCallCode(e.target.value)}>
+            {
+              callcodes.map((codes,index) => (
+                <option className="text-[#000]" key={index} value={codes.dial_code}> {codes.name}</option>
+              ))
+            }
+          </select>
+          <div className="flex flex-col w-[70%]">
+          <input
           required
-          type="text"
+          type="tel"
           name="phoneNumber"
           value={formik.values.phoneNumber}
-          onChange={formik.handleChange}
+          onChange={(e) => {
+            const formattedValue = formatDigits(e.target.value);
+            formik.setFieldValue("phoneNumber", formattedValue);
+          }}
           placeholder="phone number"
           className={`w-full outline-none p-4 border-b border-b-yellow-normal bg-transparent placeholder:text-white placeholder:capitalize ${formik.touched.phoneNumber && formik.errors.phoneNumber ?"border-red-500":"border-b-yellow-normal"}`}
         />
-         {formik.touched.phoneNumber &&formik.errors.phoneNumber ? <p className="text-xs text-red-500">{formik.errors.email}</p> :" "}
+         {formik.touched.phoneNumber &&formik.errors.phoneNumber ? <p className=" text-red-500">{formik.errors.email}</p> :" "}
+          </div>
+        </div>
+    
       </div>
 
       <button type="submit" className="px-10 py-1.5 flex items-center justify-center rounded-full bg-yellow-normal self-center text-black text-2xl">
