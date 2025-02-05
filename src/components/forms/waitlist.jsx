@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import { toast } from 'react-hot-toast'
 import { Loader2 } from 'lucide-react';
 import { useEffect } from "react";
-import {  useSearchParams } from "react-router-dom";
+import {  useSearchParams,useNavigate } from "react-router-dom";
 import callcodes from "../../services/callcode.json"
 
 export const WaitlistForm = () => {
@@ -13,7 +13,7 @@ export const WaitlistForm = () => {
   const [isLoading,setIsLoading] = useState(false)
   const links = "https://allkids-sage.vercel.app"
   const [callCode,setCallCode] = useState("+234")
-  
+  const navigate= useNavigate()  
   const [params, setParams] = useState({
     email: '',
     otp: '',
@@ -62,6 +62,7 @@ export const WaitlistForm = () => {
           axios.post(`/wishlists`,body)
           .then((res) => {
             console.log(res)
+            navigate('/success')
             toast.success(res.data.message)
             
           })
