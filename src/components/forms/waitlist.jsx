@@ -61,13 +61,13 @@ export const WaitlistForm = () => {
           const body = {...values, phoneNumber:`${callCode} ${values.phoneNumber}`}
           axios.post(`/wishlists`,body)
           .then((res) => {
-            console.log(res)
+            // console.log(res)
             navigate('/success')
             toast.success(res.data.message)
             
           })
           .catch((e) => {
-            console.log(e.response.data.message)
+            // console.log(e.response.data.message)
             toast.error(e.response.data.message)
           })
           .finally(() =>{
