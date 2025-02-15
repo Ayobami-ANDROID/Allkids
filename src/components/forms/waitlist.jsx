@@ -134,10 +134,11 @@ export const WaitlistForm = () => {
           type="tel"
           name="phoneNumber"
           value={formik.values.phoneNumber}
-          onChange={(e) => {
-            const formattedValue = formatDigits(e.target.value);
-            formik.setFieldValue("phoneNumber", formattedValue);
-          }}
+          // onChange={(e) => {
+          //   const formattedValue = formatDigits(e.target.value);
+          //   formik.setFieldValue("phoneNumber", formattedValue);
+          // }}
+          onChange={formik.handleChange}
           placeholder="phone number"
           className={`w-full outline-none p-4 border-b border-b-yellow-normal bg-transparent placeholder:text-white placeholder:capitalize ${formik.touched.phoneNumber && formik.errors.phoneNumber ?"border-red-500":"border-b-yellow-normal"}`}
         />
